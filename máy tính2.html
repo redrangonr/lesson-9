@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+ button{
+    height: 50px;
+    width: 60px;
+    color: blue;
+
+}
+    </style>
+</head>
+<body>
+<form>
+<table border="5" align="center" style="border-collapse: collapse " width="400" height="500">
+    <tr text-align="right">
+        <td colspan="4" id="display"></td>
+    </tr>
+    <tr align="center">
+        <td> <button type="button" onclick="number(1)">1</button></td>
+        <td> <button type="button" onclick="number(2)">2</button></td>
+        <td> <button type="button" onclick="number(3)">3</button></td>
+        <td> <button type="button" onclick="number('+')">+</button></td>
+    </tr>
+    <tr align="center">
+        <td><button type="button" onclick="number(4)">4</button></td>
+        <td><button type="button" onclick="number(5)">5</button></td>
+        <td><button type="button" onclick="number(6)">6</button></td>
+        <td><button type="button" onclick="number('-')">-</button></td>
+    </tr>
+    <tr align="center">
+        <td><button type="button" onclick="number(7)">7</button></td>
+        <td><button type="button" onclick="number(8)">8</button></td>
+        <td><button type="button" onclick="number(9)">9</button></td>
+        <td><button type="button" onclick="number('*')">x</button></td>
+    </tr>
+    <tr align="center">
+        <td><button type="reset" onclick="reset()">C</button></td>
+        <td><button type="button" onclick="number(0)">0</button></td>
+        <td><button type="button" onclick="result()">=</button></td>
+        <td><button type="button" onclick="number('/')">/</button></td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>
+<script>
+    function number(value){
+        document.getElementById('display').innerHTML +=value;
+    }
+    function reset() {
+        document.getElementById('display').innerHTML = '';
+    }
+    function result(){
+        document.getElementById('display').innerHTML = eval(document.getElementById('display').innerHTML);
+    }
+</script>
